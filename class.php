@@ -17,9 +17,9 @@ class Bit{
 		
 		return $signature;
 	
-	}	
-  
-	public function AllList(){
+	}
+
+ 	public function AllList(){
 		
 		$url = 'https://www.bitexen.com/api/v1/market_info/';
 		$curl = curl_init($url);
@@ -33,6 +33,7 @@ class Bit{
 		$curl_response = curl_exec($curl);
 		return $curl_response;
 	}
+
 	public function getBalance(){
 
 		$url = 'https://www.bitexen.com/api/v1/balance/';
