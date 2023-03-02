@@ -2,13 +2,13 @@
 
 class Bitexen{
 	
-	public	$userName='emailadresi';
+	public	$userName	='emailadresi';
 	
-	public	$passPhrase='passPhrase';
+	public	$passPhrase	='passPhrase';
 	
-	public	$apiKey='apiKey';
+	public	$apiKey		='apiKey';
 	
-	public	$secretKey='secretKey';
+	public	$secretKey	='secretKey';
 	
   
 	public function signRequest($time) {
