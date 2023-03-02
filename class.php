@@ -11,10 +11,9 @@ class Bit{
   
 	public function sign_request($time) {
 
-    $message = $this->apiKey . $this->USERNAME . $this->Passphrase . $time . '{}';
+    		$message = $this->apiKey . $this->USERNAME . $this->Passphrase . $time . '{}';
 		
 		$signature=strtoupper(hash_hmac('SHA256', $message, $this->secretKey));
-		
 		
 		return $signature;
 	
@@ -38,7 +37,6 @@ class Bit{
 
 		$url = 'https://www.bitexen.com/api/v1/balance/';
 		$curl = curl_init($url);
-	
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 		$time=time();
@@ -53,7 +51,8 @@ class Bit{
 
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
 		$curl_response = curl_exec($curl);
-				return $curl_response;
+		return $curl_response;
+
 	}
 	
 }
