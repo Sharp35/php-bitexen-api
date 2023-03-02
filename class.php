@@ -1,6 +1,6 @@
 <?php
 
-class Bit{
+class Bitexen{
 	
 	public	$USERNAME='emailadresi';
 	
