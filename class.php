@@ -28,7 +28,7 @@ class Bitexen{
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 		$header = array( 
-		'Content-Type: application/json'
+			'Content-Type: application/json'
 		);
 
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
