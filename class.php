@@ -11,7 +11,7 @@ class Bitexen{
 	public	$secretKey='secretKey';
 	
   
-	public function sign_request($time) {
+	public function signRequest($time) {
 
     		$message = $this->apiKey . $this->USERNAME . $this->Passphrase . $time . '{}';
 		
@@ -47,7 +47,7 @@ class Bitexen{
 		'ACCESS-USER: '. $this->USERNAME,
 		'ACCESS-PASSPHRASE: '. $this->Passphrase,
 		'ACCESS-TIMESTAMP: '.$time,
-		'ACCESS-SIGN: '.$this->sign_request($time),
+		'ACCESS-SIGN: '.$this->signRequest($time),
 		'ACCESS-KEY: '. $this->apiKey,
 		'Content-Type: application/json'
 		);
