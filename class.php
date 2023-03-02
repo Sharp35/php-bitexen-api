@@ -2,9 +2,9 @@
 
 class Bitexen{
 	
-	public	$USERNAME='emailadresi';
+	public	$userName='emailadresi';
 	
-	public	$Passphrase='Passphrase';
+	public	$passPhrase='passPhrase';
 	
 	public	$apiKey='apiKey';
 	
@@ -13,7 +13,7 @@ class Bitexen{
   
 	public function signRequest($time) {
 
-    		$message = $this->apiKey . $this->USERNAME . $this->Passphrase . $time . '{}';
+    		$message = $this->apiKey . $this->userName . $this->passPhrase . $time . '{}';
 		
 		$signature=strtoupper(hash_hmac('SHA256', $message, $this->secretKey));
 		
@@ -21,7 +21,7 @@ class Bitexen{
 	
 	}
 
- 	public function AllList(){
+ 	public function allList(){
 		
 		$url = 'https://www.bitexen.com/api/v1/market_info/';
 		$curl = curl_init($url);
@@ -44,8 +44,8 @@ class Bitexen{
 
 		$time=time();
 		$header = array(
-			'ACCESS-USER: '. $this->USERNAME,
-			'ACCESS-PASSPHRASE: '. $this->Passphrase,
+			'ACCESS-USER: '. $this->userName,
+			'ACCESS-PASSPHRASE: '. $this->passPhrase,
 			'ACCESS-TIMESTAMP: '.$time,
 			'ACCESS-SIGN: '.$this->signRequest($time),
 			'ACCESS-KEY: '. $this->apiKey,
