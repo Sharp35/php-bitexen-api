@@ -43,13 +43,13 @@ class Bitexen{
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 		$time=time();
-		$header = array( 
-		'ACCESS-USER: '. $this->USERNAME,
-		'ACCESS-PASSPHRASE: '. $this->Passphrase,
-		'ACCESS-TIMESTAMP: '.$time,
-		'ACCESS-SIGN: '.$this->signRequest($time),
-		'ACCESS-KEY: '. $this->apiKey,
-		'Content-Type: application/json'
+		$header = array(
+			'ACCESS-USER: '. $this->USERNAME,
+			'ACCESS-PASSPHRASE: '. $this->Passphrase,
+			'ACCESS-TIMESTAMP: '.$time,
+			'ACCESS-SIGN: '.$this->signRequest($time),
+			'ACCESS-KEY: '. $this->apiKey,
+			'Content-Type: application/json'
 		);
 
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
