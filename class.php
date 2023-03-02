@@ -1,3 +1,5 @@
+<?php
+
 class Bit{
 	
 	public	$USERNAME='emailadresi';
